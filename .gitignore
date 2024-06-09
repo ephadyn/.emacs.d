@@ -9,3 +9,7 @@ elpa/
 bookmarks
 network-security.data
 quelpa/
+history
+recentf
+custom.el
+*~
