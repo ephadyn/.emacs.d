@@ -13,3 +13,11 @@ history
 recentf
 custom.el
 *~
+.autosaves/
+.cache/
+.dap-breakpoints
+.local/
+.lsp-session*
+places
+tree-sitter/
+
