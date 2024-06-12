@@ -15,7 +15,7 @@
 ;; be set by the user to some other installer function.
 
 ;; `crafted-package-installed-predicate' is used to check if a package
-;; is already installed; it defautls to `package-installed-p', but can
+;; is already installed; it defaults to `package-installed-p', but can
 ;; be set by the user to some other predicate function.
 
 ;; `crafted-package-install-package' is used to install individual

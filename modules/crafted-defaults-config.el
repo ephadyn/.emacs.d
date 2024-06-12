@@ -18,7 +18,63 @@
 
 ;;; Code:
 
-
+;;; General
+(setq ring-bell-function 'ignore)
+(setq next-line-add-newlines t)
+(setq sentence-end-double-space nil)
+(setq confirm-kill-emacs 'yes-or-no-p)
+(setq gc-cons-threshold 100000000)
+(setq truncate-string-ellipsis "…")
+(setq help-window-select t)
+(setq completions-detailed t)
+(setq enable-recursive-minibuffers t)
+
+(setq use-short-answers t)
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(blink-cursor-mode -1)
+(mouse-avoidance-mode 'exile)
+(column-number-mode)
+(line-number-mode)
+(transient-mark-mode)
+(global-font-lock-mode)
+(show-paren-mode)
+(global-auto-revert-mode)
+(global-hl-line-mode)
+(global-prettify-symbols-mode)
+(global-subword-mode)
+(minibuffer-depth-indicate-mode 1)
+
+;; Scrolling
+(setq scroll-step 1)
+(pixel-scroll-precision-mode)
+
+;; Set backup and autosave directories
+(setq backup-dir "~/.emacs.d/.backups/")
+(make-directory backup-dir t)
+(setq backup-directory-alist '(("." . "~/.emacs.d/.backups")))
+(setq autosave-dir "~/.emacs.d/.autosaves/")
+(make-directory autosave-dir t)
+(setq auto-save-file-name-transforms `((".*" ,autosave-dir t)))
+(setq delete-old-versions -1)
+(setq version-control t)
+
+;; Remember line
+(if (fboundp #'save-place-mode)
+      (save-place-mode +1)
+    (setq-default save-place t))
+
+
+(setq dired-use-ls-dired nil)
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(setq ns-pop-up-frames nil)
+
+(fringe-mode '(40 . 40))
+
 ;;; Buffers
 
 ;; Revert Dired and other buffers
@@ -55,8 +111,6 @@
 ;; ibuffer.
 (customize-set-variable 'ibuffer-old-time 24)
 
-
-
 ;;; Completion settings
 
 ;; Turn on the best completion-mode available:
