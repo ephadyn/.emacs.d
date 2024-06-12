@@ -20,7 +20,7 @@
 (add-to-list 'package-selected-packages 'marginalia)
 (add-to-list 'package-selected-packages 'orderless)
 (add-to-list 'package-selected-packages 'vertico)
-
+(add-to-list 'package-selected-packages 'which-key)
 
 (provide 'crafted-completion-packages)
 ;;; crafted-completion-packages.el ends here

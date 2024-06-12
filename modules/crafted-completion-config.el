@@ -14,6 +14,10 @@
 
 ;;; Code:
 
+;;; Which-Key
+;; Start Which-Key
+(which-key-mode 1)
+
 ;;; Vertico
 (when (require 'vertico nil :noerror)
   (require 'vertico-directory)
