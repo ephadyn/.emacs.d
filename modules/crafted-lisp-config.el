@@ -44,11 +44,6 @@
   (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
   (add-hook 'scheme-mode-hook #'aggressive-indent-mode))
 
-;;; Emacs Lisp
-
-(when (locate-library "package-lint-flymake")
-  (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup))
-
 
 ;;; Common Lisp
 

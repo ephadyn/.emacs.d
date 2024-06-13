@@ -237,7 +237,17 @@ Used as hook for modes which should not display line numebrs."
     (treemacs-git-mode 'deferred)
     (treemacs-git-commit-diff-mode t)
     (treemacs-resize-icons 16)
-  )
+    )
+
+
+(when (require 'flycheck nil :noerror)
+    ;; keep flycheck on the right fringe
+    (setq flycheck-indication-mode 'right-fringe)
+    ;; A non-descript, left-pointing arrow
+    (define-fringe-bitmap 'flycheck-fringe-bitmap-arrow
+      [16 48 112 240 112 48 16] nil nil 'center)
+    (flycheck-redefine-standard-error-levels "⏴" 'flycheck-fringe-bitmap-arrow)
+    (global-flycheck-mode))
 
 (provide 'crafted-ui-config)
 ;;; crafted-ui-config.el ends here
