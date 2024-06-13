@@ -15,6 +15,7 @@
 (add-to-list 'package-selected-packages 'consult)
 (add-to-list 'package-selected-packages 'corfu)
 (add-to-list 'package-selected-packages 'corfu-terminal)
+(add-to-list 'package-selected-packages 'nerd-icons-corfu)
 (add-to-list 'package-selected-packages 'embark)
 (add-to-list 'package-selected-packages 'embark-consult)
 (add-to-list 'package-selected-packages 'marginalia)
