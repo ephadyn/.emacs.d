@@ -12,7 +12,10 @@
 ;;; diff-hl
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-(global-diff-hl-mode)
+
+(diff-hl-show-hunk-mouse-mode)
+
+(global-diff-hl-mode-enable-in-buffers)
 
 ;;; magit
 (customize-set-variable 'magit-refresh-status-buffer nil)
