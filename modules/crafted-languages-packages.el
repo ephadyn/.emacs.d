@@ -15,6 +15,8 @@
 (add-to-list 'package-selected-packages 'lsp-tailwindcss)
 (add-to-list 'package-selected-packages 'nix-mode)
 (add-to-list 'package-selected-packages 'sharper)
+(add-to-list 'package-selected-packages 'apheleia)
+(add-to-list 'package-selected-packages 'smartparens)
 
 (provide 'crafted-languages-packages)
 ;;; crafted-languages-packages.el ends here

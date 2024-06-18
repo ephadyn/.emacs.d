@@ -51,7 +51,16 @@
   (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode)))
 
 ;; Go
- (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+
+;; Formatting
+(when (require 'apheleia nil :noerror)
+  (apheleia-global-mode +1))
+
+;; Smartparens-Mode
+(when (require 'smartparens nil :noerror)
+  (add-hook 'prog-mode-hook #'smartparens-mode)
+  (require 'smartparens-config))
 
 (provide 'crafted-languages-config)
 ;;; crafted-languages-config.el ends here
