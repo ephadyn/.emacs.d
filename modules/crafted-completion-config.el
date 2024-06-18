@@ -104,6 +104,11 @@
     (keymap-set corfu-map "M-n" #'corfu-popupinfo-scroll-up)
     (keymap-set corfu-map "M-d" #'corfu-popupinfo-toggle)))
 
+;;; prescient.el
+(when (require 'prescient) nil :noerror
+      (corfu-prescient-mode)
+      (vertico-prescient-mode))
+
 
 ;;; Cape
 

@@ -20,6 +20,9 @@
 (add-to-list 'package-selected-packages 'embark-consult)
 (add-to-list 'package-selected-packages 'marginalia)
 (add-to-list 'package-selected-packages 'orderless)
+(add-to-list 'package-selected-packages 'prescient)
+(add-to-list 'package-selected-packages 'corfu-prescient)
+(add-to-list 'package-selected-packages 'vertico-prescient)
 (add-to-list 'package-selected-packages 'vertico)
 (add-to-list 'package-selected-packages 'which-key)
 
