@@ -11,6 +11,7 @@
 
 ;;; LSP mode
 (when (require 'lsp-mode nil :noerror)
+  (customize-set-variable 'lsp-auto-execute-action nil)
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
   (customize-set-variable 'lsp-keymap-prefix "C-c l")
   (add-hook 'csharp-ts-mode-hook #'lsp-deferred)
